@@ -3,44 +3,269 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+    <title>Contact | Boda Kaveri</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #0f172a;
+        color: white;
+      }
+
+      /* NAVBAR */
+      header {
+        width: 100%;
+        background: #111827;
+        padding: 18px 8%;
+        position: sticky;
+        top: 0;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: #38bdf8;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 25px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #38bdf8;
+      }
+
+      /* CONTACT SECTION */
+      .page-section {
+        min-height: 100vh;
+        padding: 80px 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .page-section h1 {
+        font-size: 50px;
+        margin-bottom: 40px;
+        color: #38bdf8;
+      }
+
+      /* FORM */
+      #contact-form {
+        width: 100%;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      #contact-form input,
+      #contact-form textarea {
+        width: 100%;
+        padding: 16px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        outline: none;
+      }
+
+      #contact-form textarea {
+        resize: none;
+      }
+
+      .btn {
+        background: #38bdf8;
+        color: #0f172a;
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: white;
+      }
+
+      /* CONTACT INFO */
+      .contact-info {
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      .contact-info p {
+        margin: 12px 0;
+        font-size: 18px;
+      }
+
+      .contact-info a {
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .contact-info a:hover {
+        color: #38bdf8;
+      }
+
+      /* WHATSAPP BUTTON */
+      .whatsapp-btn {
+        display: inline-block;
+        margin-top: 20px;
+        background: #25d366;
+        color: white;
+        padding: 14px 24px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .whatsapp-btn:hover {
+        transform: scale(1.05);
+      }
+
+      /* FOOTER */
+      footer {
+        background: #111827;
+        text-align: center;
+        padding: 20px;
+        font-size: 15px;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .page-section h1 {
+          font-size: 38px;
+        }
+      }
+    </style>
   </head>
+
   <body>
+    <!-- HEADER -->
     <header>
       <nav class="navbar">
         <div class="logo">Boda Kaveri</div>
 
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
+
           <li><a href="about.html">About</a></li>
+
           <li><a href="projects.html">Projects</a></li>
+
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
+
+    <!-- CONTACT SECTION -->
     <section class="page-section">
       <h1>Contact Me</h1>
 
-      <form id="contact-form">
-        <input type="text" placeholder="Your Name" required />
+      <!-- FORM -->
+      <!-- Replace xxxxxxxx with your Formspree ID -->
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/mwvzogbe"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Your Name" required />
 
-        <input type="email" placeholder="Your Email" required />
+        <input type="email" name="email" placeholder="Your Email" required />
 
-        <textarea rows="6" placeholder="Your Message" required></textarea>
+        <textarea
+          name="message"
+          rows="6"
+          placeholder="Your Message"
+          required
+        ></textarea>
 
         <button type="submit" class="btn">Send Message</button>
       </form>
 
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/kaveriboda">LinkedIn</a>
-        <a href="https://github.com/bodakaveri8">GitHub</a>
-        <a href="mailto:bodakaveri8@gmail.com">Email</a>
+      <!-- CONTACT INFO -->
+      <div class="contact-info">
+        <p>
+          📧
+          <a href="mailto:bodakaveri8@gmail.com"> bodakaveri8@gmail.com </a>
+        </p>
+
+        <p>
+          📞
+          <a href="tel:+919963843809"> +91 9963843809 </a>
+        </p>
+
+        <p>
+          💼
+          <a href="https://www.linkedin.com/in/kaveriboda" target="_blank">
+            LinkedIn
+          </a>
+        </p>
+
+        <p>
+          💻
+          <a href="https://github.com/bodakaveri8" target="_blank"> GitHub </a>
+        </p>
+
+        <!-- WHATSAPP -->
+        <a
+          href="https://wa.me/919963843809"
+          target="_blank"
+          class="whatsapp-btn"
+        >
+          Chat on WhatsApp
+        </a>
       </div>
     </section>
+
+    <!-- FOOTER -->
     <footer>
       <p>© 2026 Boda Kaveri Portfolio | All Rights Reserved</p>
     </footer>
+
+    <!-- OPTIONAL SUCCESS MESSAGE -->
+    <script>
+      const form = document.getElementById("contact-form");
+
+      form.addEventListener("submit", () => {
+        alert("Message sent successfully!");
+      });
+    </script>
   </body>
 </html>
+```
